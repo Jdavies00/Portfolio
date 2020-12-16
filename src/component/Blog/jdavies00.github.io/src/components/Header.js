@@ -9,7 +9,7 @@ const Header = (props) => {
     return (
         <>
             <div className="collapse bg-dark " id="navbarHeader">
-                <div className="container-fluid bg-dark pt-1">
+                <div className="container-fluid bg-dark fixed-top pt-1">
                     <div className="row">
                         <div className="col-sm-8 col-md-7 py-4">
                             <h4 className="text-white">About</h4>
@@ -18,9 +18,9 @@ const Header = (props) => {
                         <div className="col-sm-4 offset-md-1 py-4">
                             <h4 className="text-white">Contact</h4>
                             <ul className="list-unstyled">
-                                <li><a href="#" className="text-white">Blog</a></li>
-                                <li><a href="https://github.com/Jdavies00" className="text-white">Github</a></li>
-                                <li><a href="https://linkedin.com/in/jdavies00" className="text-white">Linkedin</a></li>
+                                <li><a href="./jdavies00.github.io" className="text-white">1. Blog</a></li>
+                                <li><a href="#" className="text-white">2. Sunt officia in cillum enim consectetur irure veniam.</a></li>
+                                <li><a href="#" className="text-white">3. Ex proident est duis ad proident.</a></li>
                             </ul>
                         </div>
                     </div>

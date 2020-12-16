@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+// import Card from 'react-bootstrap/Card';
 import '/Users/jamesdavies/Sites/Portfolio /portfolio/src/css/calculator.css'
 function Calculator() {
 
@@ -42,6 +43,7 @@ function Calculator() {
     }
 
     function pushButton(item) {
+        console.log("click")
 
 
         let operators = "+x/-=";
@@ -144,10 +146,11 @@ function Calculator() {
         )
     })
 
-    return (
-        <div className="container mb-5 pb-5 pr-5 mr-5">
+    return (   
+    
+        <div className="container mb-5 pb-5 pr-5 mr-5 ml-4">
             <div className="row">
-                <div className="col-md-4 offset-4 text-center">
+                <div className="col-md-4 text-center">
                     <div className="row">
                         <div id="display" className="col-12 text-right bg-dark">
                             <h1 className="display-3 mb-0 text-white">{display}</h1>
