@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import Board from "./boardSP"
+
+import Board from "./boardSP";
+import SPheader from "./Spheader";
 
 class SlidingPuzzle extends Component {
   constructor() {
@@ -59,6 +61,7 @@ class SlidingPuzzle extends Component {
   render() {
     return (
       <div>
+      <SPheader />
         <Board
           tile_Data_Raw={this.state.dataForTheTile}
           tile_click={this.clickfunction}

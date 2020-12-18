@@ -12,6 +12,7 @@ const Header = (props) => {
                 <div className="container-fluid bg-dark pt-1">
                     <div className="row">
                         <div className="col-sm-8 col-md-7 py-4">
+                        <img   style={{width: 200, height: 175, borderRadius: 200/2}}  src="headShot.jpg"/>
                             <h4 className="text-white">About</h4>
                             <p className="text-muted">Velit fugiat aute cillum velit exercitation occaecat irure aliquip. Aliqua fugiat est nulla mollit est aute. Esse pariatur eu nostrud exercitation nisi. Eiusmod velit cupidatat mollit sunt. Proident quis laboris sint dolore laborum.</p>
                         </div>

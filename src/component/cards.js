@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import CardDeck from 'react-bootstrap/CardDeck';
-import { Container, Row, Col } from 'reactstrap';
+import { Container } from 'reactstrap';
 
 // import { Button, ButtonGroup, Container } from 'reactstrap';
 import Game from "./TicTacToe/Game";
@@ -12,8 +12,16 @@ import TodoList from "./TodoList/TodoList";
 // import MindReader from "./mindreader/mindReader"
 // import CountDown from "./countDowntimer";
 // import WeatherApp from "./weatherapp"
-// import SlidingPuzzle from "./slidingPuzzle/game"
+// import SlidingPuzzle from "./slidingPuzzle/SPapp"
 export default function Cards() {
+    const standAloneStyle= {
+        fontSize: 50,
+        textAlign:"center",
+    }
+    const ticTacToeStyle= {
+        topPadding:30,
+        textAlign:"center",
+    }
     return (
         <>
             <Container>
@@ -55,20 +63,25 @@ export default function Cards() {
                             <small className="text-muted"> </small>
                         </Card.Footer>
                     </Card>
-                    <Card>
+                    <Card style ={ticTacToeStyle}>
+                        <Card.Title  className='text-center'>Tic-Tac-Toe</Card.Title>
+                        <Game />
+                    
+                    </Card>
+                    {/* <Card>
                         <Card.Body>
                             <Card.Title>
                             </Card.Title>
 
-                                {/* <MindReader /> */}
+                                <MindReader />
 
                         </Card.Body>
                         <Card.Footer>
-                            {/* <small className="text-muted">
+                            <small className="text-muted">
                              
-                            </small> */}
+                            </small>
                         </Card.Footer>
-                    </Card>
+                    </Card> */}
                 </CardDeck>
 
                 <br />
@@ -83,19 +96,20 @@ export default function Cards() {
                         <small className="text-muted"> </small>
                     </Card.Footer>
                 </Card>
-                    <Card>
+
+                    {/* <Card>
                         <Card.Title className='text-center'>Tic-Tac-Toe</Card.Title>
                         <Game />
                         <Card.Footer>
                             <small className="text-muted"></small>
                         </Card.Footer>
-                    </Card>
-                    <Card>
-                        <Card.Body className="text-center">
-                            <Card.Title >StandAlones</Card.Title>
-                            <i className="fas fa-blog">Blog</i><br />
-                            <i className="fab fa-github">Github</i>
+                    </Card> */}
 
+                    <Card>
+                        <Card.Body  style = {standAloneStyle}className="text-center">
+                            <Card.Title >StandAlones</Card.Title>
+                            <i className="fas fa-blog"> Blog</i><br />
+                            <i className="fab fa-github"> Github</i>
                         </Card.Body>
                         <Card.Footer>
                             <small className="text-muted"> </small>
