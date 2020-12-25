@@ -1,26 +1,23 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import CardDeck from 'react-bootstrap/CardDeck';
-import { Container } from 'reactstrap';
-
-// import { Button, ButtonGroup, Container } from 'reactstrap';
+import { Container, Row, Col } from 'reactstrap';
 import Game from "./TicTacToe/Game";
 import Clock from './clock';
 import Calculator from "./calculator";
 import '/Users/jamesdavies/Sites/Portfolio /portfolio/src/css/card.css';
 import TodoList from "./TodoList/TodoList";
-// import MindReader from "./mindreader/mindReader"
-// import CountDown from "./countDowntimer";
-// import WeatherApp from "./weatherapp"
+// import { Button, ButtonGroup, Container } from 'reactstrap';
 // import SlidingPuzzle from "./slidingPuzzle/SPapp"
+
 export default function Cards() {
-    const standAloneStyle= {
+    const standAloneStyle = {
         fontSize: 50,
-        textAlign:"center",
+        textAlign: "center",
     }
-    const ticTacToeStyle= {
-        topPadding:30,
-        textAlign:"center",
+    const ticTacToeStyle = {
+        topPadding: 30,
+        textAlign: "center",
     }
     return (
         <>
@@ -35,15 +32,6 @@ export default function Cards() {
                             <small className="text-muted"> </small>
                         </Card.Footer>
                     </Card>
-                    {/* <Card>
-                    <Card.Body>
-                        <Card.Title>Weather App</Card.Title>
-                            <WeatherApp />
-                    </Card.Body>
-                    <Card.Footer>
-                        <small className="text-muted"> </small>
-                    </Card.Footer>
-                </Card> */}
                 </CardDeck>
                 <br />
                 <CardDeck>
@@ -51,7 +39,7 @@ export default function Cards() {
                         <Card.Title>Calculator</Card.Title>
                         <Calculator />
                         <Card.Footer >
-                            <small className="text-muted" > </small>
+                            <small className="text-muted"> </small>
                         </Card.Footer>
                     </Card>
                     <Card>
@@ -63,39 +51,22 @@ export default function Cards() {
                             <small className="text-muted"> </small>
                         </Card.Footer>
                     </Card>
-                    <Card style ={ticTacToeStyle}>
-                        <Card.Title  className='text-center'>Tic-Tac-Toe</Card.Title>
+                    <Card style={ticTacToeStyle}>
+                        <Card.Title className='text-center'>Tic-Tac-Toe</Card.Title>
                         <Game />
-                    
                     </Card>
-                    {/* <Card>
-                        <Card.Body>
-                            <Card.Title>
-                            </Card.Title>
-
-                                <MindReader />
-
-                        </Card.Body>
-                        <Card.Footer>
-                            <small className="text-muted">
-                             
-                            </small>
-                        </Card.Footer>
-                    </Card> */}
                 </CardDeck>
-
                 <br />
-
                 <CardDeck>
                     <Card>
-                    <Card.Body>
-                        <Card.Title>Sliding Puzzle</Card.Title>
-                        {/* <SlidingPuzzle /> */}
-                    </Card.Body>
-                    <Card.Footer>
-                        <small className="text-muted"> </small>
-                    </Card.Footer>
-                </Card>
+                        <Card.Body>
+                            <Card.Title>Sliding Puzzle</Card.Title>
+                            {/* <SlidingPuzzle /> */}
+                        </Card.Body>
+                        <Card.Footer>
+                            <small className="text-muted"> </small>
+                        </Card.Footer>
+                    </Card>
 
                     {/* <Card>
                         <Card.Title className='text-center'>Tic-Tac-Toe</Card.Title>
@@ -106,10 +77,16 @@ export default function Cards() {
                     </Card> */}
 
                     <Card>
-                        <Card.Body  style = {standAloneStyle}className="text-center">
+                        <Card.Body style={standAloneStyle} className="text-center">
                             <Card.Title >StandAlones</Card.Title>
-                            <i className="fas fa-blog"> Blog</i><br />
-                            <i className="fab fa-github"> Github</i>
+                            <i className="fas fa-blog"> Blog</i>
+                            <br />
+                            <a href="https://github.com/Jdavies00">
+                                <i className="fab fa-github"> Github</i></a>
+                            <a href="https://jdavies00.github.io/weather-API/">
+                                <i class="fas fa-cloud">Weather API</i></a>
+                            <br />
+                            <a href="https://jdavies00.github.io/MindReader/"><i class="fab fa-readme">Mind Reader App </i></a>
                         </Card.Body>
                         <Card.Footer>
                             <small className="text-muted"> </small>
@@ -117,6 +94,13 @@ export default function Cards() {
                     </Card>
                 </CardDeck>
             </Container>
+            <Row>
+                <Col>
+                    <footer id="footer">
+                        <span className="text-muted">sometext</span>
+                    </footer>
+                </Col>
+            </Row>
         </>
     )
 }
