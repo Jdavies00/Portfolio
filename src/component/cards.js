@@ -7,7 +7,6 @@ import Clock from './clock';
 import Calculator from "./calculator";
 import '/Users/jamesdavies/Sites/Portfolio /portfolio/src/css/card.css';
 import TodoList from "./TodoList/TodoList";
-// import { Button, ButtonGroup, Container } from 'reactstrap';
 // import SlidingPuzzle from "./slidingPuzzle/SPapp"
 
 export default function Cards() {
@@ -67,15 +66,6 @@ export default function Cards() {
                             <small className="text-muted"> </small>
                         </Card.Footer>
                     </Card>
-
-                    {/* <Card>
-                        <Card.Title className='text-center'>Tic-Tac-Toe</Card.Title>
-                        <Game />
-                        <Card.Footer>
-                            <small className="text-muted"></small>
-                        </Card.Footer>
-                    </Card> */}
-
                     <Card>
                         <Card.Body style={standAloneStyle} className="text-center">
                             <Card.Title >StandAlones</Card.Title>
