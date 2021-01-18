@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 // import Card from 'react-bootstrap/Card';
+
 import '/Users/jamesdavies/Sites/Portfolio /portfolio/src/css/calculator.css'
 function Calculator() {
 
@@ -148,7 +149,7 @@ function Calculator() {
 
     return (   
     
-        <div className="container mb-5 pb-5 pr-5 mr-5 ml-4">
+        <div id = "calculator" className=" mb-5 pb-5">
             <div className="row">
                 <div className="col-md-4 text-center">
                     <div className="row">
