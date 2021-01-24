@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
+import { Container, Col } from "reactstrap"
 
 import Board from "./boardSP";
-import SPheader from "./Spheader";
 
 class SlidingPuzzle extends Component {
   constructor() {
@@ -31,16 +31,15 @@ class SlidingPuzzle extends Component {
     }
     this.clickfunction = this.clickfunction.bind(this)
   }
+
   clickfunction(tileID) {
     for (let i = 0; i < 16; i++) {
       var evilTileValue = this.state.dataForTheTile[i].currentValue
-      if (evilTileValue == 0)
+      if (evilTileValue === 0)
         for (let j = 0; j < this.state.dataForTheTile[tileID].possibleMoves.length; j++) {
-          var posibleMoveID = this.state.dataForTheTile[tileID].possibleMoves[j];
+          var possibleMoveID = this.state.dataForTheTile[tileID].possibleMoves[j];
           var currentMoveToCheck = this.state.dataForTheTile[i].id
-          // console.log(currentMoveToCheck)
-          //compare the //posiblemvoes array  for the tile that was clicked on
-          if (posibleMoveID == currentMoveToCheck) {
+          if (possibleMoveID === currentMoveToCheck) {
             console.log('can switch')
             // create a new array with updated values
             let copy = this.state.dataForTheTile
@@ -49,27 +48,39 @@ class SlidingPuzzle extends Component {
             temp = copy[tileID].currentValue
             copy[tileID].currentValue = copy[i].currentValue
             copy[i].currentValue = temp
-            // console.log(copy)
+            console.log(copy)
             this.setState({ dataForTheTile: copy })
-          } else { console.log('can not switch') }
+            break;
+          } else {
+            console.log('can not switch')
+            break
+          }
+
         }
     }
   }
+
+
   componentDidUpdate() {
     console.log("state was set", this.state.dataForTheTile);
   }
   render() {
     return (
-      <div>
-      <SPheader />
-        <Board
-          tile_Data_Raw={this.state.dataForTheTile}
-          tile_click={this.clickfunction}
-        />
-      </div>
+      <>
+        <Container>
+          <Col>
+            <h1> Sliding Puzzle </h1>
+          </Col>
+          <Board
+            tile_Data_Raw={this.state.dataForTheTile}
+            tile_click={this.clickfunction} />
+        </Container>
+      </>
     );
   }
 }
+
+
 
 
 

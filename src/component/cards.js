@@ -20,7 +20,6 @@ export default function Cards() {
     return (
         <>
             <Container>
-
                 <Row>
                     <Col sm="12" md={{ size: 6, offset: 3 }}>
                         <Card>
@@ -57,9 +56,7 @@ export default function Cards() {
                         </Card>
                     </Col>
                 </Row>
-
                 <br />
-
                 <Row>
                     <Col xs="auto" md="6">
                         <Card>
@@ -73,22 +70,7 @@ export default function Cards() {
                         </Card>
                     </Col>
 
-                    <br />
-
                     <Col xs="auto" md="6">
-                        <Card className="text-center">
-                            <Card.Body>
-                                <Card.Title>Sliding Puzzle</Card.Title>
-                                <SlidingPuzzle />
-                            </Card.Body>
-                            <Card.Footer>
-                                <small className="text-muted"> </small>
-                            </Card.Footer>
-                        </Card>
-                    </Col>
-
-                    <Col xs="auto" md="6">
-                    <br />
                         <Card>
                             <Card.Body style={standAloneStyle} className="text-center">
                                 <Card.Title >StandAlones</Card.Title>
@@ -107,7 +89,19 @@ export default function Cards() {
                             </Card.Footer>
                         </Card>
                     </Col>
+                </Row>
+                <br />
+                <Row>
 
+                    <Card className="text-center">
+                        <SlidingPuzzle />
+                        <Card.Footer>
+                            <small className="text-muted"> </small>
+                        </Card.Footer>
+                    </Card>
+                    <Col xs="auto" md="6">
+                        <br />
+                    </Col>
                 </Row>
             </Container>
         </>
