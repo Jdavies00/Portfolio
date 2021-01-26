@@ -74,11 +74,7 @@ export default function Cards() {
                         <Card>
                             <Card.Body style={standAloneStyle} className="text-center">
                                 <Card.Title >StandAlones</Card.Title>
-                                <a href="https://jdaviesblog-a14a2.firebaseapp.com/">
-                                    <i className="fas fa-blog"> Blog</i></a>
-                                <br />
-                                <a href="https://github.com/Jdavies00">
-                                    <i className="fab fa-github"> Github</i></a>
+                             
                                 <a href="https://jdavies00.github.io/weather-API/">
                                     <i class="fas fa-cloud">Weather API</i></a>
                                 <br />

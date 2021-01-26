@@ -33,7 +33,7 @@ class SlidingPuzzle extends Component {
   }
 
   clickfunction(tileID) {
-    for (let i = 0; i < 16; i++) {
+    for (let i = 0; i < 15; i++) {
       var evilTileValue = this.state.dataForTheTile[i].currentValue
       if (evilTileValue === 0)
         for (let j = 0; j < this.state.dataForTheTile[tileID].possibleMoves.length; j++) {
@@ -50,10 +50,9 @@ class SlidingPuzzle extends Component {
             copy[i].currentValue = temp
             console.log(copy)
             this.setState({ dataForTheTile: copy })
-            break;
           } else {
             console.log('can not switch')
-            break
+            
           }
 
         }

@@ -46,8 +46,12 @@ function App() {
       <Cards id="CardDeck" />
       <Row>
         <Col>
-          <footer style={{ backgroundColor: "grey", height: "15px" }} className="sticky-bottom">
-            <span className="text-muted"></span>
+          <footer style={{ backgroundColor: "#A9A9A9", height: "100%" }} className="sticky-bottom text-center">
+            <a href="https://jdaviesblog-a14a2.firebaseapp.com/">
+              <i className="fas fa-blog"> Blog</i></a>
+            <br />
+            <a href="https://github.com/Jdavies00">
+              <i className="fab fa-github"> Github</i></a>
           </footer>
         </Col>
       </Row>
