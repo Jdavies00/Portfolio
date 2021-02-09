@@ -1,61 +1,70 @@
-import { Col, Row } from "reactstrap"
+import React, { useState } from 'react';
+import {
+  Col, Row, Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+  NavbarText, Jumbotron
+} from "reactstrap"
 import './App.css';
 import Cards from './component/cards';
+
+
+
 function App() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => setIsOpen(!isOpen);
+
   return (
-
-    <div className="App">
-      <div className="collapse bg-dark " id="navbarHeader">
-        <div className="container-fluid bg-dark pt-1">
-          <div className="row">
-            <div className="col-sm-8 col-md-7 py-4">
-              <img style={{ width: 500, height: 350, borderRadius: 400 / 2 }} src="headShot.jpg" alt="JdaviesheadShot.jpg" />
-            </div>
-            <div className="col-sm-4 offset-md-1 py-4">
-              <h4 className="text-white">Contact</h4>
-              <ul className="list-unstyled">
-                <li><a href="https://jdaviesblog-a14a2.web.app/" className="text-white">Blog</a></li>
-                <li><a href="https://github.com/Jdavies00" className="text-white">Github</a></li>
-                <li><a href="https://linkedin.com/in/jdavies00" className="text-white">Linkedin</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="navbar navbar-dark bg-dark shadow-sm">
-        <div className="container d-flex justify-content-between">
-          <a href="#" className="navbar-brand d-flex align-items-center">
-            <i className="far fa-handshake p= 3px"></i>
-          </a>
-          <strong className="text-white font-size= 10 px">Portfolio </strong>
-
-          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-        </div>
-      </div>
-      <div className="jumbotron mt-4" >
-        <h1 className="display-4">Hello!<br /> Welcome to my protfolio</h1>
-
-      </div>
-      <div></div>
-      <div className="jumbotron">
-        <h1 className="display-4">Below are some of my projects,<br />Take a look!</h1>
-
-      </div>
-      <Cards id="CardDeck" />
-      <Row>
-        <Col>
-          <footer style={{ backgroundColor: "#A9A9A9", height: "100%" }} className="sticky-bottom text-center">
-            <a href="https://jdaviesblog-a14a2.firebaseapp.com/">
-              <i className="fas fa-blog"> Blog</i></a>
-            <br />
-            <a href="https://github.com/Jdavies00">
-              <i className="fab fa-github"> Github</i></a>
-          </footer>
-        </Col>
-      </Row>
+    <>
+    <div>
+      <Navbar color="light" light expand="md">
+        {/* <NavbarBrand href="/">reactstrap</NavbarBrand> */}
+        <NavbarToggler onClick={toggle} />
+        <Collapse isOpen={isOpen} navbar>
+          <Nav className="mr-auto" navbar>
+            <NavItem>
+              <NavLink href="https://jdaviesblog-a14a2.web.app/" target ="_blank">Blog</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="https://github.com/Jdavies00" target ="_blank">GitHub</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="https://linkedin.com/in/jdavies00" target ="_blank">Linkedin</NavLink>
+            </NavItem>
+          </Nav>
+        </Collapse>
+      </Navbar>
     </div>
+    <Jumbotron>
+      <img style={{ width: 400, height: 250, borderRadius: 400 / 2 }} src="headShot.jpg" alt="JdaviesheadShot.jpg" />
+      <h1 className="display-4">Hello!
+          <br /> Welcome to my protfolio</h1>
+    </Jumbotron>
+    <Jumbotron>
+      <h1 className="display-4">Below are some of my projects,<br />Take a look!</h1>
+    </Jumbotron>
+    <Cards id="CardDeck" />
+    <Row>
+      <Col>
+        <footer style={{ backgroundColor: "#A9A9A9", height: "100%" }} className="sticky-bottom text-center">
+          <a href="https://jdaviesblog-a14a2.firebaseapp.com/">
+            <i className="fas fa-blog"> Blog</i></a>
+          <br />
+          <a href="https://github.com/Jdavies00">
+            <i className="fab fa-github"> Github</i></a>
+        </footer>
+      </Col>
+    </Row>
+    </>
   );
 }
 
