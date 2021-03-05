@@ -26,7 +26,7 @@ function App() {
   return (
     <>
     <div>
-      <Navbar color="light" light expand="md">
+      <Navbar color="dark" light expand="md">
         {/* <NavbarBrand href="/">reactstrap</NavbarBrand> */}
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
@@ -47,7 +47,7 @@ function App() {
     <Jumbotron>
       <img style={{ width: 400, height: 250, borderRadius: 400 / 2 }} src="headShot.jpg" alt="JdaviesheadShot.jpg" />
       <h1 className="display-4">Hello!
-          <br /> Welcome to my protfolio</h1>
+          <br /> Welcome to my portfolio</h1>
     </Jumbotron>
     <Jumbotron>
       <h1 className="display-4">Below are some of my projects,<br />Take a look!</h1>
