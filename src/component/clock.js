@@ -1,4 +1,6 @@
 import React, {useState, useRef, useEffect} from 'react';
+import Stopwatch from './Stopwatch';
+
 
 const Timer = () => {
   const [time, setTime] = useState(new Date().toLocaleTimeString());
