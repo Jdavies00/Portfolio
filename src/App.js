@@ -3,15 +3,9 @@ import {
   Col, Row, Collapse,
   Navbar,
   NavbarToggler,
-  NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText, Jumbotron
+  NavLink, Jumbotron
 } from "reactstrap"
 import './App.css';
 import Cards from './component/cards';
@@ -23,39 +17,38 @@ function App() {
 
   const toggle = () => setIsOpen(!isOpen);
 
+
   return (
     <>
     <div>
-      <Navbar color="dark" light expand="md">
-        {/* <NavbarBrand href="/">reactstrap</NavbarBrand> */}
+      <Navbar style= {{ backgroundColor:"black"}} light expand="md" text-white >
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
-            <NavItem>
-              <NavLink href="https://jdaviesblog-a14a2.web.app/" target ="_blank">Blog</NavLink>
+            <NavItem className="pl-2">
+              <NavLink style={{color:"#15BDCA", fontSize: "30px", fontWeight:"900"}} href="https://jdaviesblog-a14a2.web.app/" target ="_blank">Blog</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://github.com/Jdavies00" target ="_blank">GitHub</NavLink>
+              <NavLink style={{color:"#15BDCA", fontSize: "30px", fontWeight:"900"}} href="https://github.com/Jdavies00" target ="_blank">GitHub</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://linkedin.com/in/jdavies00" target ="_blank">Linkedin</NavLink>
+              <NavLink style={{color:"#15BDCA", fontSize: "30px", fontWeight:"900"}} href="https://linkedin.com/in/jdavies00" target ="_blank">Linkedin</NavLink>
             </NavItem>
           </Nav>
         </Collapse>
       </Navbar>
     </div>
-    <Jumbotron>
-      <img style={{ width: 400, height: 250, borderRadius: 400 / 2 }} src="headShot.jpg" alt="JdaviesheadShot.jpg" />
-      <h1 className="display-4">Hello!
-          <br /> Welcome to my portfolio</h1>
+    <Jumbotron height= "1250px">
+      {/* <img style={{ width: 400, height: 250, borderRadius: 400 / 2 }} src="headShot.jpg" alt="JdaviesheadShot.jpg" /> */}
+      <h1 className=" display-4">J. ANTHONY DAVIES PORTFOLIO</h1>
     </Jumbotron>
-    <Jumbotron>
-      <h1 className="display-4">Below are some of my projects,<br />Take a look!</h1>
-    </Jumbotron>
+    {/* <Jumbotron>
+      <h1 className="display-4">BELOW ARE SOME OF MY PROJECTS,<br />TAKE A LOOK</h1>
+    </Jumbotron> */}
     <Cards id="CardDeck" />
     <Row>
       <Col>
-        <footer style={{ backgroundColor: "#A9A9A9", height: "100%" }} className="sticky-bottom text-center">
+        <footer style={{ backgroundColor: "rgb(87, 86, 86)", height: "100%" }} className="sticky-bottom text-center">
           <a href="https://jdaviesblog-a14a2.firebaseapp.com/">
             <i className="fas fa-blog"> Blog</i></a>
           <br />
