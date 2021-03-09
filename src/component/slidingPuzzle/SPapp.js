@@ -65,17 +65,17 @@ export default class Slider extends Component {
   }
   render() {
     return (
-      <div className="container  bg-info">
+      <div className="container  ">
         <div className="row d-flex text-center">
-          <h4 className="col-12 text-primary">Zero is the empty block! Click Start, then slide the peices back to their orignal positions</h4>
+          <h4 className="col-12">Zero is the empty block! Click Start, then slide the peices back to their orignal positions</h4>
           {
             this.state.Tiles.map((item, i) =>   //mapping through tiles array
               <div
                 key={i}
                 id={i}
-                className="col-3 border border-info text-primary bg-success"
+                className="col-3 border border-info"
                 onClick={() => this.isClicked(item)}
-                style={{height: 110, fontSize: '15px', fontWeight: 700, margin:"auto"}}>
+                style={{height: 210, fontSize: '20px', fontWeight: 700, margin:"auto"}}>
                 {item.value}
               </div>
             )
