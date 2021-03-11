@@ -38,7 +38,7 @@ function App() {
         </Collapse>
       </Navbar>
     </div>
-    <Jumbotron height= "1250px">
+    <Jumbotron >
       {/* <img style={{ width: 400, height: 250, borderRadius: 400 / 2 }} src="headShot.jpg" alt="JdaviesheadShot.jpg" /> */}
       <h1 className=" display-4">J. ANTHONY DAVIES PORTFOLIO</h1>
     </Jumbotron>
